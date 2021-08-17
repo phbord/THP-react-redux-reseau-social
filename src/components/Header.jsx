@@ -7,26 +7,14 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="navbar shadow-sm">
-        <div className="container">
           <div className="d-flex">
             <Link to="/" 
-                  className="navbar-brand d-flex align-items-center">Agence RE</Link>
+                  className="navbar-brand d-flex align-items-center">My Social Network</Link>
             <ul className="d-flex align-items-center">
               <li className="mx-2">
-                <Link to="/" className="navbar-brand">Accueil</Link>
-              </li>
-              <li className="me-2">
-                <Link to="/about" className="navbar-brand">A propos</Link>
-              </li>
-              <li className="me-2">
-                <Link to="/works/platon-study-case" className="navbar-brand">Travaux</Link>
               </li>
             </ul>
           </div>
-          <button type="button" 
-                  className="btn"
-                  onClick={switchNight}>Changer de thème</button>
-        </div>
       </nav>
     </header>
   );
