@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./components/variables";
 
 body {
   margin: 0;
@@ -18,4 +19,16 @@ ul,li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  color: $blue;
+}
+
+.header {
+  background-color: $blue;
+
+  a {
+    color: $light;
+  }
 }

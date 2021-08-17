@@ -2,7 +2,7 @@ import React from 'react';
 
 const InputRadioDouble = ({name, value1, value2, onChange, label1, label2}) => {
   return (
-    <div className="d-flex">
+    <div className="d-flex mt-3">
       <input type="radio" 
               value={value1} 
               id={`${name}-1`} 

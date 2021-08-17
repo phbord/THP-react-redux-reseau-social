@@ -2,7 +2,7 @@ import React from 'react';
 
 const InputCheckbox = ({name, value, onChange, children}) => {
   return (
-    <div className="form-check">
+    <div className="form-check mt-3">
       <input type="checkbox" 
               value={value} 
               id={name} 
