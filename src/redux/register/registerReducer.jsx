@@ -1,8 +1,8 @@
 import Cookies from 'js-cookie'
 
-import { SIGN_IN, SIGN_OUT, LOGIN_SUCCESS, AUTH_SUCCESS } from './loginTypes'
+import { REGISTER_SUCCESS } from '../login/loginTypes'
 
-//const token = Cookies.get('token')
+const token = Cookies.get('token')
 
 const initialState = {
   user: null,
@@ -13,9 +13,8 @@ const initialState = {
 
 const loginReducer = (state = initialState, action) => {
   switch(action.type) {
-    // LOG IN
-    case LOGIN_SUCCESS:
-      Cookies.set('token', action.payload.jwt)
+    case REGISTER_SUCCESS:
+      Cookies.set('token', action.user.jwt)
       return {
         ...state,
         user: action.payload.user,
@@ -23,12 +22,6 @@ const loginReducer = (state = initialState, action) => {
         isAuth: true
         //checkLogOutBtn: state.checkLogOutBtn
       };
-    // LOG OUT
-    // case SIGN_OUT:
-    //   return {
-    //     ...state,
-    //     login: false
-    //   };
     default:
       return state;
   }

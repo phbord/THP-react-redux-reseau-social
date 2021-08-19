@@ -1,2 +1,3 @@
 export { fetchNewsRequest, fetchNewsSuccess, fetchNewsFailure } from './routes/routesActions'
-export { signIn, signOut } from './login/loginActions'
+export { login, logout } from './login/loginActions'
+export { getUsers, findUser } from './profiles/profilesActions'

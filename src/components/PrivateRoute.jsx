@@ -2,16 +2,11 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom'
 import Cookies from 'js-cookie';
 
-import Login from 'components/Login';
-
-const checkAuth = () => {
-  if (Cookies.get('token')) return true
-  return false
-}
+import Login from 'pages/Login';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
-    checkAuth() ? (
+    Cookies.get('token') ? (
       <Component {...props} />
     ) : (
       <Redirect to={{ pathname: '/login' }} />

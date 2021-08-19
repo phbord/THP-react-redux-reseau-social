@@ -1,0 +1,4 @@
+export const POSTS_SUCCESS = 'POSTS_SUCCESS';
+export const POSTS_SUCCESS = 'POSTS_SUCCESS';
+export const POST_SUCCESS = 'POST_SUCCESS';
+export const POST_SUCCESS = 'POST_SUCCESS';
