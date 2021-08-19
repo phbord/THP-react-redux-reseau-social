@@ -1,6 +1,6 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import { getUsers } from '../redux/index.jsx'
 

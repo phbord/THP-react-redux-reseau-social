@@ -8,11 +8,16 @@ import { logout } from '../redux/index.jsx'
 const Header = () => {
   // effectue une action depuis le 'store' et change le 'state'
   const dispatch = useDispatch();
+  const history = useHistory()
   const { checkLogOutBtn } = useSelector(state => state)
+  const { logOut, setLogOut} = React.useState('')
 
-  const handleLogout = (e) => {
-    e.preventDefault()
+  const handleLogout = () => {
     dispatch(logout())
+    //logout()
+    if (!Cookies.get('token')) {
+      history.push('/login')
+    }
   }
 
   return (

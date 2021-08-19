@@ -31,7 +31,6 @@ export const login = (userData, url='') => async(dispatch) => {
   } 
   else if (response.status === 400) {
     p.classList.remove('d-none')
-
     dispatch({
       type: AUTH_FAILURE,
       payload: data.message
@@ -39,9 +38,9 @@ export const login = (userData, url='') => async(dispatch) => {
   }
 }
 
-export const logout = (dispatch) => {
+export const logout = () => (dispatch) => {
   Cookies.remove('token')
-  window.location = '/login'
+  //window.location = '/login'
 
   dispatch({
     type: SIGN_OUT,
